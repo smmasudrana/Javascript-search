@@ -1,14 +1,14 @@
 //two type for loop
-// const numbers = [53, 63, 97, 23, 25, 16, 84]
+const numbers = [53, 63, 97, 23, 25, 16, 84]
 
-// for(let i = 0; i < numbers.length; i++){
-//     const number =numbers[i];
-//     console.log(number);
-// }
+for(let i = 0; i < numbers.length; i++){
+    const number =numbers[i];
+    console.log(number);
+}
 
-// for(const number of numbers){
-//     console.log(number);
-// }
+for(const number of numbers){
+    console.log(number);
+}
 
 
 
@@ -37,3 +37,26 @@ const result=matchedProducts(products, 'Phone');
 console.log(result);
 
 
+
+//search laptop
+const laptops=[
+    {id: 1, name:'mac air', price: 263751},
+    {id: 2, name:'Hp elite', price: 167351},
+    {id: 3, name:'Huwai gen 4', price: 158351},
+    {id: 4, name:'Dell', price: 276351},
+    {id: 5, name:'Acer', price: 265351},
+    {id: 6, name:'Asus', price: 267351},
+    {id: 7, name:'Asus pro', price: 245351},
+]
+function allLaptops(laptops, search){
+    const matchedLaptops=[];
+    for(const laptop of laptops){
+        if(laptop.name.toLowerCase().includes(search.toLowerCase())){
+            matchedLaptops.push(laptop);
+        }
+    }
+    return matchedLaptops;
+}
+
+const laptopModel=allLaptops(laptops, 'huwai');
+console.log(laptopModel);
